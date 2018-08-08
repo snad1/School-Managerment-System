@@ -172,7 +172,7 @@ class DbTables extends Migration
 
         Schema::table('students', function (Blueprint $table) {
             $table->foreign('parent_id')
-                ->references('parent_id')->on('parents')
+                ->references('parent_id')->on('parent')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
