@@ -9,6 +9,13 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+    public const ADMIN='admin';
+
+    public const TEACHER='teacher';
+
+    public const PARENT='parent';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -26,4 +33,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function is_admin(){
+        return $this->role==User::ADMIN;
+    }
+
+    public function is_teacher(){
+        return $this->role=User::TEACHER;
+    }
+    public function is_parent(){
+        return $this->role=User::PARENT;
+    }
 }
