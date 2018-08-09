@@ -15,6 +15,26 @@ class Student extends Model
                         'hometown','gender','city','region','country'];
 
     public function parent(){
-        return $this->hasOne(Parent::class);
+        return $this->belongsTo(Parent::class);
+    }
+
+    public function class(){
+        return $this->belongsTo(StudentClass::class);
+    }
+
+    public function subject_marks(){
+        return $this->hasMany(Subject_Marks::class);
+    }
+
+    public function result(){
+        return $this->hasOne(Result::class);
+    }
+
+    public function payments(){
+        return $this->hasMany(Payment::class);
+    }
+
+    public function report(){
+        return $this->hasOne(Report::class);
     }
 }
