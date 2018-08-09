@@ -153,7 +153,6 @@ return [
          */
 
 
-        JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         /*
          * Application Service Providers...
          */

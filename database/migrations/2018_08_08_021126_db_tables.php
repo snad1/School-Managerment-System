@@ -172,9 +172,6 @@ class DbTables extends Migration
             $table->softDeletes();
             });
 
-
-
-
         Schema::create('class_subject_allocation',function (Blueprint $table){
             $table->increments('c_s_a_id');
             $table->unsignedInteger('class_id');
