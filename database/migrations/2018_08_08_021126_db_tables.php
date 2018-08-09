@@ -56,31 +56,13 @@ class DbTables extends Migration
             $table->string('level')->nullable();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('subject_id')
-                ->references('subject_id')
-                ->on('subjects')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
-        Schema::table('subject_teacher_allocation',function (Blueprint $table){
+        Schema::create('subject_teacher_allocation',function (Blueprint $table){
             $table->increments('s_c_a_id');
             $table->unsignedInteger('subject_id');
             $table->unsignedInteger('teacher_id');
             $table->timestamps();
-
-            $table->foreign('subject_id')
-                ->refrences('subject_id')
-                ->on('subjects')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->foreign('teacher_id')
-                ->refrences('teacher_id')
-                ->on('teachers')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
         });
 
         Schema::create('classes', function (Blueprint $table) {
@@ -92,16 +74,6 @@ class DbTables extends Migration
             $table->unsignedInteger('teacher_id');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('teacher_id')
-                ->references('teacher_id')->on('teachers')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('student_id')
-                ->references('student_id')->on('students')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
         Schema::create('subjects', function (Blueprint $table) {
@@ -125,70 +97,27 @@ class DbTables extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('subject_id')->references('subject_id')
-                ->on('subjects')->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('student_id')->references('student_id')
-                ->on('students')->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('teacher_id')->references('teacher_id')
-                ->on('teachers')->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('class_id')->references('class_id')
-                ->on('class')->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
-        Schema::table('teacher_subject_marks',function (Blueprint $table){
+        Schema::create('teacher_subject_marks',function (Blueprint $table){
             $table->increments('t_s_m_id');
             $table->unsignedInteger('subject_marks_id');
             $table->unsignedInteger('teacher_id');
             $table->timestamps();
-
-
-            $table->foreign('subject_marks_id')
-                ->refrences('subject_marks_id')
-                ->on('subject_marks')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->foreign('teacher_id')
-                ->refrences('teacher_id')
-                ->on('teachers')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
         });
 
-        Schema::table('marks_student_subject',function (Blueprint $table){
+        Schema::create('marks_student_subject',function (Blueprint $table){
             $table->increments('m_s_s_id');
             $table->unsignedInteger('subject_marks_id');
             $table->unsignedInteger('student_id');
             $table->timestamps();
-
-
-            $table->foreign('subject_marks_id')
-                ->refrences('subject_marks_id')
-                ->on('subject_marks')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->foreign('student_id')
-                ->refrences('student_id')
-                ->on('students')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
         });
 
 
 
         Schema::create('results', function (Blueprint $table) {
             $table->increments('result_id');
-            $table->json('marks');
+            //$table->json('marks');
             $table->unsignedInteger('teacher_id');
             $table->unsignedInteger('class_id');
             $table->unsignedInteger('student_id');
@@ -196,23 +125,7 @@ class DbTables extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('teacher_id')
-                ->references('teacher_id')
-                ->on('teachers')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
 
-            $table->foreign('class_id')
-                ->references('class_id')
-                ->on('class')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('student_id')
-                ->references('student_id')
-                ->on('students')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
         Schema::create('attendances', function (Blueprint $table) {
@@ -225,18 +138,6 @@ class DbTables extends Migration
             $table->date('attendance_date');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('teacher_id')->references('teacher_id')
-                ->on('teachers')->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('class_id')->references('class_id')
-                ->on('class')->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('student_id')->references('student_id')
-                ->on('students')->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
         Schema::create('fees', function (Blueprint $table) {
@@ -246,9 +147,7 @@ class DbTables extends Migration
             $table->unsignedInteger('year');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('class_id')->references('class_id')->on('class')->onDelete('cascade')->onUpdate('cascade');
-        });
+             });
 
         Schema::create('payments', function (Blueprint $table) {
             $table->increments('payment_id');
@@ -257,10 +156,6 @@ class DbTables extends Migration
             $table->date('date');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('student_id')->references('student_id')
-                ->on('students')->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
 
@@ -275,38 +170,16 @@ class DbTables extends Migration
             $table->text('strength_weakness');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('student_id')->references('student_id')->on('students')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('result_id')->references('result_id')->on('result')->onDelete('cascade')->onUpdate('cascade');
-        });
+            });
 
 
-        Schema::table('students', function (Blueprint $table) {
-            $table->foreign('parent_id')
-                    ->references('parent_id')->on('parent')
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade');
-        });
 
-        Schema::table('class_subject_allocation',function (Blueprint $table){
+
+        Schema::create('class_subject_allocation',function (Blueprint $table){
             $table->increments('c_s_a_id');
             $table->unsignedInteger('class_id');
             $table->unsignedInteger('subject_id');
             $table->timestamps();
-
-
-            $table->foreign('class_id')
-                ->refrences('class_id')
-                ->on('classes')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-            $table->foreign('class_id')
-                ->refrences('class_id')
-                ->on('classes')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
         });
 
     }
