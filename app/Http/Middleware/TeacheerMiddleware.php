@@ -15,6 +15,9 @@ class TeacheerMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if(!Auth::user()->is_teacher()){
+            return redirect()->back();
+        }
         return $next($request);
     }
 }

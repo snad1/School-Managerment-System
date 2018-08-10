@@ -15,6 +15,9 @@ class ParentMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if(!Auth::user()->is_parent()){
+            return redirect()->back();
+        }
         return $next($request);
     }
 }
