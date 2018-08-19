@@ -48,10 +48,6 @@ class Relationships extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('student_id')
-                ->references('student_id')->on('students')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
         });
 
         Schema::table('subject_marks', function (Blueprint $table) {

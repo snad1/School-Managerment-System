@@ -10,7 +10,7 @@ class Teacher extends Model
 
 
     protected $fillable=['first_name','last_name','other_name','dob','doj','martial_status',
-                        'email','status','image','image_path','address','hometown','gender',
+                        'email','status','image_path','address','hometown','gender',
                         'city','region','country','subject_id'];
 
     public function subjects(){

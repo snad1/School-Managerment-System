@@ -10,6 +10,12 @@
 @endsection
 
 @section('page_content')
+    <!--For the admin of the website for the index page-->
+    @if(Auth::user()->is_admin())
+        @include('admin.home')
+    @endif
+
+
 
 @endsection
 
@@ -20,5 +26,7 @@
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
+
+    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
 
 @endsection

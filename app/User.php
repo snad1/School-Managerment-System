@@ -41,6 +41,7 @@ class User extends Authenticatable
     public function is_teacher(){
         return $this->role==User::TEACHER;
     }
+
     public function is_parent(){
         return $this->role==User::PARENT;
     }

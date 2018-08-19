@@ -22,9 +22,7 @@ class CreateStudentsTable extends Migration
             $table->date('doj');
             $table->unsignedInteger('parent_id');
             $table->unsignedInteger('phone');
-            $table->string('status');
             $table->string('class_id');
-            $table->string('image');
             $table->string('image_path');
             $table->string('address');
             $table->string('hometown');

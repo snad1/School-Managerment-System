@@ -21,7 +21,6 @@ class DbTables extends Migration
             $table->date('dob');
             $table->string('email');
             $table->unsignedInteger('phone');
-            $table->string('status');
             $table->string('occupation');
             $table->string('relationship');
             $table->string('address');
@@ -44,7 +43,6 @@ class DbTables extends Migration
             $table->string('martial_status');
             $table->string('email');
             $table->string('status');
-            $table->string('image');
             $table->string('image_path');
             $table->string('address');
             $table->string('hometown');
@@ -68,7 +66,6 @@ class DbTables extends Migration
         Schema::create('classes', function (Blueprint $table) {
             $table->increments('class_id');
             $table->string('class_name');
-            $table->unsignedInteger('student_id');
             $table->string('level');
             $table->string('n_o_s');
             $table->unsignedInteger('teacher_id');

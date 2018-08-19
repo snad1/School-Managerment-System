@@ -10,8 +10,8 @@ class Student extends Model
     protected $table='students';
 
     protected $fillable=['first_name','last_name','other_name',
-                        'dob','doj','parent_id','phone','status',
-                        'class_id','image','image_path','address',
+                        'dob','doj','parent_id','phone',
+                        'class_id','image_path','address',
                         'hometown','gender','city','region','country'];
 
     public function parent(){
