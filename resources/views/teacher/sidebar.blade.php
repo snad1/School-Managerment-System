@@ -5,102 +5,101 @@
     </a>
 </li>
 
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
+<li>
+    <a data-toggle="collapse" href="#pagesExamples" >
+        <i class="now-ui-icons education_hat"></i>
         <p>
-            <span class="d-lg-none d-md-block">Academics</span>
+            Academics <b class="caret"></b>
         </p>
     </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
-        <p>
-            <span class="d-lg-none d-md-block">Students</span>
-        </p>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
-        <p>
-            <span class="d-lg-none d-md-block">Assesment</span>
-        </p>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
-        <p>
-            <span class="d-lg-none d-md-block">Report</span>
-        </p>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+    <div class="collapse " id="pagesExamples">
+        <ul class="nav">
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+        </ul>
     </div>
 </li>
 
 
 
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
+<li>
+    <a data-toggle="collapse" href="#student" >
+        <i class="now-ui-icons users_single-02"></i>
         <p>
-            <span class="d-lg-none d-md-block">Events</span>
+            Students <b class="caret"></b>
         </p>
     </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+    <div class="collapse " id="student">
+        <ul class="nav">
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+        </ul>
     </div>
 </li>
 
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
+<li>
+    <a data-toggle="collapse" href="#student" >
+        <i class="now-ui-icons users_single-02"></i>
         <p>
-            <span class="d-lg-none d-md-block">Reports</span>
+            Assessment <b class="caret"></b>
         </p>
     </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+    <div class="collapse " id="student">
+        <ul class="nav">
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+        </ul>
     </div>
 </li>
 
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="http://example.com/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="now-ui-icons location_world"></i>
+<li>
+    <a data-toggle="collapse" href="#reports" >
+        <i class="now-ui-icons education_paper"></i>
         <p>
-            <span class="d-lg-none d-md-block">Guardians/ Parents</span>
+            Reports <b class="caret"></b>
         </p>
     </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+    <div class="collapse " id="reports">
+        <ul class="nav">
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+        </ul>
     </div>
 </li>
+
+<li>
+    <a data-toggle="collapse" href="#reports" >
+        <i class="now-ui-icons education_paper"></i>
+        <p>
+            Attendance <b class="caret"></b>
+        </p>
+    </a>
+    <div class="collapse " id="reports">
+        <ul class="nav">
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</li>
+
+
