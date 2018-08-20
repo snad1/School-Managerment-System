@@ -1,25 +1,73 @@
-<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-    <div class="menu_section">
-        <h3>General</h3>
-        <ul class="nav side-menu">
-            @if(Auth::check())
-                @if(Auth::user()->is_admin())
+<div class="sidebar" data-color="green">
+    <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+    <div class="logo">
+        <a href="{{route('home')}}" class="simple-text logo-mini">
+            <span style="font-size: smaller">UBAS</span>
+        </a>
+        <a href="{{route('home')}}" class="simple-text logo-normal">
+            <span style="font-size: x-small">University of Mines Basic School</span>
+        </a>
+        <div class="navbar-minimize">
+            <button id="minimizeSidebar" class="btn btn-simple btn-icon btn-neutral btn-round">
+                <i class="now-ui-icons text_align-center visible-on-sidebar-regular"></i>
+                <i class="now-ui-icons design_bullet-list-67 visible-on-sidebar-mini"></i>
+            </button>
+        </div>
+    </div>
 
-            <li><a><i class="fa fa-home"></i> Admin <span class="fa fa-chevron-down"></span></a></li>
+    <div class="sidebar-wrapper">
+        <div class="user">
+            <div class="photo">
+                <img src="https://demos.creative-tim.com/now-ui-dashboard-pro/assets/img/james.jpg" />
+            </div>
+            <div class="info">
+                <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                    <span>
+                        James Amos
+                        <b class="caret"></b>
+                    </span>
+                </a>
+                <div class="clearfix"></div>
+                <div class="collapse" id="collapseExample">
+                    <ul class="nav">
+                        <li>
+                            <a href="#">
+                                <span class="sidebar-mini-icon">MP</span>
+                                <span class="sidebar-normal">My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sidebar-mini-icon">EP</span>
+                                <span class="sidebar-normal">Edit Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="sidebar-mini-icon">S</span>
+                                <span class="sidebar-normal">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-                @endif
-                @if (Auth::user()->is_teacher())
+        <ul class="nav">
 
-                        <li><a><i class="fa fa-home"></i> Teacher <span class="fa fa-chevron-down"></span></a></li>
+            @if(Auth::user()->is_admin())
+                @include('admin.sidebar')
+            @endif
 
-                    @endif
-                @if(Auth::user()->is_parent())
+            @if(Auth::user()->is_teacher())
+                @include('teacher.sidebar')
+            @endif
 
-                        <li><a><i class="fa fa-home"></i> Parent <span class="fa fa-chevron-down"></span></a></li>
-
-                    @endif
-                @endif
+            @if(Auth::user()->is_parent())
+                @include('parent.sidebar')
+            @endif
         </ul>
     </div>
 </div>
-<!-- /sidebar menu -->
