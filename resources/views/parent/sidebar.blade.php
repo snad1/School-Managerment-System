@@ -104,7 +104,7 @@
 <li >
     <a href="#">
         <i class="now-ui-icons design_app"></i>
-        <p>Dashboard</p>
+        <p>Report</p>
     </a>
 </li>
 
