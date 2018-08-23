@@ -15,11 +15,66 @@
     <div class="collapse " id="pagesExamples">
         <ul class="nav">
             <li>
+                <a data-toggle="collapse" href="#subjects" >
+                    <p>
+                        Subjects <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse " id="subjects">
+                    <ul class="nav">
+                        <li>
+                            <a href="pages/pricing.html">
+                                <span class="sidebar-normal"> Subjects </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/pricing.html">
+                                <span class="sidebar-normal"> Assign Subject </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            ////
+
+            <li>
                 <a href="pages/pricing.html">
                     <span class="sidebar-mini-icon">P</span>
                     <span class="sidebar-normal"> Pricing </span>
                 </a>
             </li>
+
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/pricing.html">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Pricing </span>
+                </a>
+            </li>
+
         </ul>
     </div>
 </li>
