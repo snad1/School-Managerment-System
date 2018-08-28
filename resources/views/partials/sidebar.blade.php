@@ -21,29 +21,29 @@
 
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-users"></i>Users
+                        <i class="fas fa-copy"></i> Academics
                         <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
                     </a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Users</a>
+                            <a href="{{route('subject.index')}}">
+                                Subjects</a>
                         </li>
                         <li>
                             <a href="form.html">
-                                <i class="far fa-check-square"></i>Create Users</a>
+                                Classes</a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fas fa-calendar-alt"></i>Restore Users</a>
+                                TimeTable</a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-copy"></i>Posts
+                         <i class="fas fa-users"></i>Students
                         <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
@@ -51,21 +51,21 @@
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
                             <a href="login.html">
-                                <i class="fas fa-sign-in-alt"></i>Post</a>
+                                All Students</a>
                         </li>
                         <li>
                             <a href="register.html">
-                                <i class="fas fa-user"></i>Create Post</a>
+                                Admit New Students </a>
                         </li>
                         <li>
                             <a href="forget-pass.html">
-                                <i class="fas fa-unlock-alt"></i>Restore Post</a>
+                                Attendance</a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-sort"></i>Cateogries
+                        <i class="fas  fa-money"></i>Finance
                         <span class="arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
@@ -73,22 +73,40 @@
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
                             <a href="button.html">
-                                <i class="fab fa-flickr"></i>Categories</a>
+                                </i>Fees</a>
                         </li>
                         <li>
                             <a href="badge.html">
-                                <i class="fas fa-comment-alt"></i>Create categories</a>
+                                </i>Billing</a>
                         </li>
                         <li>
                             <a href="tab.html">
-                                <i class="far fa-window-maximize"></i>Restore Categories</a>
+                                </i>Fees Log</a>
                         </li>
                     </ul>
                 </li>
 
-                <li>
-                    <a href="#">
-                        <i class="fas fa-tags"></i>Tags</a>
+                <li class="has-sub">
+                    <a class="js-arrow" href="#">
+                        <i class="fas fa-sort"></i>Performance
+                        <span class="arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                    </a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                        <li>
+                            <a href="button.html">
+                                Class Performance</a>
+                        </li>
+                        <li>
+                            <a href="badge.html">
+                               Student Performance</a>
+                        </li>
+                        <li>
+                            <a href="tab.html">
+                                Subject Performance</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>

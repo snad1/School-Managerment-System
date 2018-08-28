@@ -5,7 +5,7 @@
             <div class="header-wrap">
                 <form class="form-header" action="" method="POST">
                     {{--<div id="">--}}
-                    <input class="au-input au-input--xl typeahead" type="text" name="search" placeholder="Search for users" />
+                    <input class="au-input au-input--xl typeahead" type="text" name="search" placeholder="Search for Students and Teachers" />
                     {{--</div>--}}
                     <button class="au-btn--submit" type="submit">
                         <i class="zmdi zmdi-search"></i>
@@ -127,7 +127,7 @@
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="content">
-                                <a class="js-acc-btn" href="#">john doe</a>
+                                <a class="js-acc-btn" href="#">{{Auth::user()->first_name}} {{Auth::user()->last_name}}</a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
