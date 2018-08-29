@@ -1,6 +1,6 @@
 <!-- MENU SIDEBAR-->
 <aside class="menu-sidebar2">
-    <div class="logo">
+    <div class="logo bg-success">
         <a href="#">
             <img src="images/icon/logo-white.png" alt="Cool Admin" />
         </a>
@@ -32,7 +32,7 @@
                                 Subjects</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="{{ route('classes.index')}}">
                                 Classes</a>
                         </li>
                         <li>
@@ -50,7 +50,7 @@
                     </a>
                     <ul class="list-unstyled navbar__sub-list js-sub-list">
                         <li>
-                            <a href="login.html">
+                            <a href="{{route('student.index')}}">
                                 All Students</a>
                         </li>
                         <li>

@@ -30,4 +30,6 @@ Route::middleware(['auth','admin'])->group(function (){
 
     Route::get('/classes-assign','classsms\StudentClassController@assign')->name('classes.assign');
 
+    Route::resource('student','student\StudentController');
+
 });

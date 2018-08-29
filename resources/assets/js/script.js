@@ -1,3 +1,10 @@
+
+
+$(document).ready(function() {
+    $('#mytable').DataTable();
+} );
+
+
 var ctx = document.getElementById("attendanceChart").getContext('2d');
 
 var mychart = new Chart(ctx,{
@@ -39,3 +46,4 @@ var mychart = new Chart(ctx,{
     }
 
 });
+

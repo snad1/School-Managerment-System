@@ -20,6 +20,9 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "datatables": "^1.10.18",
+        "datatables.net": "^1.10.19",
+        "datatables.net-dt": "^1.10.19",
         "gentelella": "^1.4.0"
     }
 }

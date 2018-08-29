@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\classsms;
 
+use App\StudentClass;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,9 @@ class StudentClassController extends Controller
      */
     public function index()
     {
-        //
+        $classes = StudentClass::all();
+
+        return view('admin.studentclasses',compact('classes'));
     }
 
     /**
@@ -69,7 +72,8 @@ class StudentClassController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
     }
 
     /**

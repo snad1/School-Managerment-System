@@ -19,7 +19,7 @@ class SubjectClassController extends Controller
 
         //return $subjects;
 
-        return view('admin.subject',compact('subjects'));
+        return view('admin.subjects',compact('subjects'));
     }
 
     /**

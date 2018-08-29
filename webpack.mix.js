@@ -25,6 +25,10 @@ mix.js([
     'resources/assets/js/vendor/select2/select2.min.js',
     'resources/assets/js/main.js',
     'resources/assets/js/vendor/jasny-bootstrap-3.1.3-dist/jasny-bootstrap/js/jasny-bootstrap.js',
+    'resources/assets/js/vendor/DataTables/DataTables-1.10.18/js/jquery.dataTables.js',
+    'resources/assets/js/vendor/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.js',
+
+
     'resources/assets/js/script.js'
 ], 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css');
